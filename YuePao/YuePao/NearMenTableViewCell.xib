@@ -42,17 +42,31 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="sign" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Go7-Eu-cYK">
-                        <rect key="frame" x="71" y="36" width="223" height="21"/>
+                        <rect key="frame" x="71" y="36" width="127" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-CP-HTW">
+                        <rect key="frame" x="259" y="32" width="46" height="30"/>
+                        <color key="backgroundColor" red="0.21203980058832239" green="0.47450980392156861" blue="0.17540374327202385" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="关注">
+                            <color key="titleColor" red="1" green="0.98823535439999999" blue="0.98823535439999999" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <state key="highlighted">
+                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RUB-m0-gcb" secondAttribute="trailing" constant="8" id="egW-gW-2Af"/>
+                    <constraint firstAttribute="trailing" secondItem="WFK-CP-HTW" secondAttribute="trailing" constant="15" id="i0K-FT-UQK"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="btnFollow" destination="WFK-CP-HTW" id="7fg-oh-Nb0"/>
                 <outlet property="iconView" destination="vaa-JA-dGA" id="JYE-xX-CMV"/>
                 <outlet property="lblAge" destination="7st-O1-bJo" id="YnQ-Jw-oEV"/>
                 <outlet property="lblDistance" destination="atu-Zy-jXP" id="rhh-sK-prf"/>

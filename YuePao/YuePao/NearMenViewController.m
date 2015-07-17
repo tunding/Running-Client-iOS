@@ -12,6 +12,7 @@
 #import "RCDChatViewController.h"
 #import <MJRefresh/MJRefresh.h>
 #import "NearMenTableViewCell.h"
+#import "PersonDetailViewController.h"
 
 @interface NearMenViewController ()
 {
@@ -116,22 +117,15 @@
     NSInteger row = indexPath.row;
     
     //创建会话
-    RCDChatViewController *chatViewController = [[RCDChatViewController alloc] init];
-    chatViewController.conversationType = ConversationType_PRIVATE;
-    chatViewController.targetId = [[arrNearMen objectAtIndex:row] objectForKey:@"uuid"];
-    chatViewController.title = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
-    chatViewController.userName = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
-    [self.navigationController pushViewController:chatViewController animated:YES];
+//    RCDChatViewController *chatViewController = [[RCDChatViewController alloc] init];
+//    chatViewController.conversationType = ConversationType_PRIVATE;
+//    chatViewController.targetId = [[arrNearMen objectAtIndex:row] objectForKey:@"uuid"];
+//    chatViewController.title = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
+//    chatViewController.userName = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
+//    [self.navigationController pushViewController:chatViewController animated:YES];
     
-    // 您需要根据自己的 App 选择场景触发聊天。这里的例子是一个 Button 点击事件。
-//    RCConversationViewController *conversationVC = [[RCConversationViewController alloc]init];
-//    conversationVC.conversationType =ConversationType_PRIVATE; //会话类型，这里设置为 PRIVATE 即发起单聊会话。
-//    conversationVC.targetId = [[arrNearMen objectAtIndex:row] objectForKey:@"uuid"]; // 接收者的 targetId，这里为举例。
-//    conversationVC.targetName = [[arrNearMen objectAtIndex:row] objectForKey:@"name"]; // 接受者的 username，这里为举例。
-//    conversationVC.title = [[arrNearMen objectAtIndex:row] objectForKey:@"name"]; // 会话的 title。
-    // 把单聊视图控制器添加到导航栈。
-//    [self presentViewController:conversationVC animated:NO completion:nil];
-//    [self.navigationController pushViewController:conversationVC animated:YES];
+    PersonDetailViewController *personDetail = [[PersonDetailViewController alloc] initWithPersonDic:[arrNearMen objectAtIndex:row]];
+    [self.navigationController pushViewController:personDetail animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

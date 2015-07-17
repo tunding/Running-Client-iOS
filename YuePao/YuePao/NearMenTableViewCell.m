@@ -7,6 +7,7 @@
 //
 
 #import "NearMenTableViewCell.h"
+#import "prefix-header.h"
 
 @implementation NearMenTableViewCell
 @synthesize iconView;
@@ -15,6 +16,7 @@
 @synthesize lblDistance;
 @synthesize lblLastTime;
 @synthesize lblSignature;
+@synthesize btnFollow;
 
 @synthesize iconURI;
 @synthesize name;
@@ -56,5 +58,10 @@
 -(void)setSignature:(NSString *)_signature
 {
     lblSignature.text = _signature;
+}
+
+-(IBAction)btnFollowPressed:(id)sender
+{
+    
 }
 @end
