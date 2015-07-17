@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C7615EB3-E61B-4D30-AC2D-DC9D9127C803</string>
+	<key>IDESourceControlProjectName</key>
+	<string>YuePao</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D44141965D9F595B6112BC0DEA0F1096FD327D60</key>
+		<string>github.com:tunding/Running-Client-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>YuePao/YuePao.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D44141965D9F595B6112BC0DEA0F1096FD327D60</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:tunding/Running-Client-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D44141965D9F595B6112BC0DEA0F1096FD327D60</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D44141965D9F595B6112BC0DEA0F1096FD327D60</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Running-Client-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

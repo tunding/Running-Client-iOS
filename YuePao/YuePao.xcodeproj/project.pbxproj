@@ -13,6 +13,7 @@
 		384084AA1B58E30A00768A98 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084A81B58E30A00768A98 /* PersonDetailViewController.m */; };
 		384084AB1B58E30A00768A98 /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084A91B58E30A00768A98 /* PersonDetailViewController.xib */; };
 		384084B11B58F67D00768A98 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084B01B58F67D00768A98 /* Person.m */; };
+		3864D4051B59691B00FC0DC2 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */; };
 		386B0E061B1AC29100B59996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E051B1AC29100B59996 /* main.m */; };
 		386B0E091B1AC29100B59996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E081B1AC29100B59996 /* AppDelegate.m */; };
 		386B0E0C1B1AC29100B59996 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E0B1B1AC29100B59996 /* ViewController.m */; };
@@ -113,6 +114,8 @@
 		384084A91B58E30A00768A98 /* PersonDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
 		384084AF1B58F67D00768A98 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		384084B01B58F67D00768A98 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		3864D4031B59691B00FC0DC2 /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewController.h; sourceTree = "<group>"; };
+		3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileTableViewController.m; sourceTree = "<group>"; };
 		386B0E001B1AC29100B59996 /* YuePao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuePao.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		386B0E041B1AC29100B59996 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		386B0E051B1AC29100B59996 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -355,6 +358,8 @@
 				38BEC3761B2EDFE00088B457 /* prefix-header.h */,
 				386B0E291B1AD8D600B59996 /* ChatListViewController.h */,
 				386B0E2A1B1AD8D600B59996 /* ChatListViewController.m */,
+				3864D4031B59691B00FC0DC2 /* MyProfileTableViewController.h */,
+				3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */,
 				386B0E0D1B1AC29100B59996 /* Main.storyboard */,
 				386B0E101B1AC29100B59996 /* Images.xcassets */,
 				386B0E121B1AC29100B59996 /* LaunchScreen.xib */,
@@ -844,6 +849,7 @@
 				38FB36D91B4BD72900C6232A /* RCDAddressBookViewController.m in Sources */,
 				38FB36A71B4BD40900C6232A /* NSData+ImageContentType.m in Sources */,
 				38FB36B11B4BD40900C6232A /* UIImage+MultiFormat.m in Sources */,
+				3864D4051B59691B00FC0DC2 /* MyProfileTableViewController.m in Sources */,
 				38FB36CB1B4BD65200C6232A /* RCDSelectPersonViewController.m in Sources */,
 				38C7FEBE1B56CDA8003007E1 /* NearMenTableViewCell.m in Sources */,
 				38FB36B31B4BD40900C6232A /* UIImageView+HighlightedWebCache.m in Sources */,
@@ -992,7 +998,7 @@
 					"$(PROJECT_DIR)/YuePao/Utilities/umsdk_IOS_analytics_idfa_v3.4.6/UMAnalytics_Sdk_3.4.6",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "d5d20a88-faa3-4f2b-9a76-1ce5919b01db";
+				PROVISIONING_PROFILE = "98e98d65-f9e7-4393-81ad-915105e63d47";
 			};
 			name = Debug;
 		};
