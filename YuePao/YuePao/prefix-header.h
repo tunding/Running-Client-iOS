@@ -27,5 +27,16 @@
 #define kUrlGetRongCloudToken [NSString stringWithFormat:@"%@rongcloud/gettoken",kUrlHost]
 //publish activity
 #define kUrlPublishActivity [NSString stringWithFormat:@"%@activity/info/saveactivity",kUrlHost]
-
+//get user info
+#define kUrlGetUserInfo [NSString stringWithFormat:@"%@runner/near/info",kUrlHost]
+//follow somebody
+#define kUrlFollowOther [NSString stringWithFormat:@"%@ralationship/friendship/attention",kUrlHost]
+//我关注的人
+#define kUrlFollowList [NSString stringWithFormat:@"%@ralationship/friendship/listfriend",kUrlHost]
+//关注我的人
+#define kUrlFollowedList [NSString stringWithFormat:@"%@ralationship/friendship/listfriend",kUrlHost]
+//我发布的活动
+#define kUrlPublishList [NSString stringWithFormat:@"%@activity/info/public/gethistoryactivity",kUrlHost]
+//我参与的活动
+#define kUrlParticipateList [NSString stringWithFormat:@"%@activity/info/participate/gethistoryactivity",kUrlHost]
 #endif

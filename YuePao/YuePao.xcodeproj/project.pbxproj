@@ -13,6 +13,14 @@
 		384084AA1B58E30A00768A98 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084A81B58E30A00768A98 /* PersonDetailViewController.m */; };
 		384084AB1B58E30A00768A98 /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084A91B58E30A00768A98 /* PersonDetailViewController.xib */; };
 		384084B11B58F67D00768A98 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084B01B58F67D00768A98 /* Person.m */; };
+		384084E71B5D07D600768A98 /* FriendsListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084E51B5D07D600768A98 /* FriendsListTableViewController.m */; };
+		384084E81B5D07D600768A98 /* FriendsListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084E61B5D07D600768A98 /* FriendsListTableViewController.xib */; };
+		384084EC1B5D084C00768A98 /* FriendsListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084EA1B5D084C00768A98 /* FriendsListTableViewCell.m */; };
+		384084ED1B5D084C00768A98 /* FriendsListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084EB1B5D084C00768A98 /* FriendsListTableViewCell.xib */; };
+		384084F11B5D13AC00768A98 /* ActivitiesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084EF1B5D13AC00768A98 /* ActivitiesListTableViewCell.m */; };
+		384084F21B5D13AC00768A98 /* ActivitiesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084F01B5D13AC00768A98 /* ActivitiesListTableViewCell.xib */; };
+		384084F61B5D13D700768A98 /* ActivitiesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084F41B5D13D700768A98 /* ActivitiesListTableViewController.m */; };
+		384084F71B5D13D700768A98 /* ActivitiesListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084F51B5D13D700768A98 /* ActivitiesListTableViewController.xib */; };
 		3864D4051B59691B00FC0DC2 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */; };
 		386B0E061B1AC29100B59996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E051B1AC29100B59996 /* main.m */; };
 		386B0E091B1AC29100B59996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E081B1AC29100B59996 /* AppDelegate.m */; };
@@ -114,6 +122,18 @@
 		384084A91B58E30A00768A98 /* PersonDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
 		384084AF1B58F67D00768A98 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		384084B01B58F67D00768A98 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		384084E41B5D07D600768A98 /* FriendsListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewController.h; sourceTree = "<group>"; };
+		384084E51B5D07D600768A98 /* FriendsListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewController.m; sourceTree = "<group>"; };
+		384084E61B5D07D600768A98 /* FriendsListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListTableViewController.xib; sourceTree = "<group>"; };
+		384084E91B5D084C00768A98 /* FriendsListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsListTableViewCell.h; sourceTree = "<group>"; };
+		384084EA1B5D084C00768A98 /* FriendsListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsListTableViewCell.m; sourceTree = "<group>"; };
+		384084EB1B5D084C00768A98 /* FriendsListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FriendsListTableViewCell.xib; sourceTree = "<group>"; };
+		384084EE1B5D13AC00768A98 /* ActivitiesListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesListTableViewCell.h; sourceTree = "<group>"; };
+		384084EF1B5D13AC00768A98 /* ActivitiesListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesListTableViewCell.m; sourceTree = "<group>"; };
+		384084F01B5D13AC00768A98 /* ActivitiesListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesListTableViewCell.xib; sourceTree = "<group>"; };
+		384084F31B5D13D700768A98 /* ActivitiesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesListTableViewController.h; sourceTree = "<group>"; };
+		384084F41B5D13D700768A98 /* ActivitiesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesListTableViewController.m; sourceTree = "<group>"; };
+		384084F51B5D13D700768A98 /* ActivitiesListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesListTableViewController.xib; sourceTree = "<group>"; };
 		3864D4031B59691B00FC0DC2 /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewController.h; sourceTree = "<group>"; };
 		3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileTableViewController.m; sourceTree = "<group>"; };
 		386B0E001B1AC29100B59996 /* YuePao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuePao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -360,6 +380,18 @@
 				386B0E2A1B1AD8D600B59996 /* ChatListViewController.m */,
 				3864D4031B59691B00FC0DC2 /* MyProfileTableViewController.h */,
 				3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */,
+				384084E41B5D07D600768A98 /* FriendsListTableViewController.h */,
+				384084E51B5D07D600768A98 /* FriendsListTableViewController.m */,
+				384084E61B5D07D600768A98 /* FriendsListTableViewController.xib */,
+				384084E91B5D084C00768A98 /* FriendsListTableViewCell.h */,
+				384084EA1B5D084C00768A98 /* FriendsListTableViewCell.m */,
+				384084EB1B5D084C00768A98 /* FriendsListTableViewCell.xib */,
+				384084F31B5D13D700768A98 /* ActivitiesListTableViewController.h */,
+				384084F41B5D13D700768A98 /* ActivitiesListTableViewController.m */,
+				384084F51B5D13D700768A98 /* ActivitiesListTableViewController.xib */,
+				384084EE1B5D13AC00768A98 /* ActivitiesListTableViewCell.h */,
+				384084EF1B5D13AC00768A98 /* ActivitiesListTableViewCell.m */,
+				384084F01B5D13AC00768A98 /* ActivitiesListTableViewCell.xib */,
 				386B0E0D1B1AC29100B59996 /* Main.storyboard */,
 				386B0E101B1AC29100B59996 /* Images.xcassets */,
 				386B0E121B1AC29100B59996 /* LaunchScreen.xib */,
@@ -731,10 +763,14 @@
 			files = (
 				38BEC37F1B2EF9270088B457 /* Default-568h.png in Resources */,
 				38C7FEBF1B56CDA8003007E1 /* NearMenTableViewCell.xib in Resources */,
+				384084F21B5D13AC00768A98 /* ActivitiesListTableViewCell.xib in Resources */,
+				384084ED1B5D084C00768A98 /* FriendsListTableViewCell.xib in Resources */,
 				386B0E0F1B1AC29100B59996 /* Main.storyboard in Resources */,
 				384084AB1B58E30A00768A98 /* PersonDetailViewController.xib in Resources */,
 				386B0E141B1AC29100B59996 /* LaunchScreen.xib in Resources */,
+				384084E81B5D07D600768A98 /* FriendsListTableViewController.xib in Resources */,
 				384084A61B575FB100768A98 /* NearActivityTableViewCell.xib in Resources */,
+				384084F71B5D13D700768A98 /* ActivitiesListTableViewController.xib in Resources */,
 				386B0E111B1AC29100B59996 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -788,6 +824,7 @@
 			files = (
 				38FAD3281B37EA5A00321313 /* NearActivityViewController.m in Sources */,
 				38BEC3791B2EE8560088B457 /* TabBarViewController.m in Sources */,
+				384084F11B5D13AC00768A98 /* ActivitiesListTableViewCell.m in Sources */,
 				38FB36AE1B4BD40900C6232A /* SDWebImagePrefetcher.m in Sources */,
 				38FB35EA1B4BD00B00C6232A /* RCDChatListViewController.m in Sources */,
 				38FB36A31B4BD40900C6232A /* RCDNavigationBar.m in Sources */,
@@ -801,6 +838,7 @@
 				38FB36AB1B4BD40900C6232A /* SDWebImageDownloader.m in Sources */,
 				38FB36AD1B4BD40900C6232A /* SDWebImageManager.m in Sources */,
 				38FB36B01B4BD40900C6232A /* UIImage+GIF.m in Sources */,
+				384084EC1B5D084C00768A98 /* FriendsListTableViewCell.m in Sources */,
 				38FB36981B4BD40900C6232A /* JSONModelError.m in Sources */,
 				38FB36AF1B4BD40900C6232A /* UIButton+WebCache.m in Sources */,
 				38FB36C51B4BD54600C6232A /* RCDAddFriendTableViewController.m in Sources */,
@@ -822,6 +860,7 @@
 				38FB35F01B4BD1B600C6232A /* RCDChatViewController.m in Sources */,
 				384084A51B575FB100768A98 /* NearActivityTableViewCell.m in Sources */,
 				38FB36C01B4BD49800C6232A /* RCDAddFriendViewController.m in Sources */,
+				384084F61B5D13D700768A98 /* ActivitiesListTableViewController.m in Sources */,
 				38FB36D81B4BD72900C6232A /* RCDAddressBookTableViewCell.m in Sources */,
 				38FB36B71B4BD40900C6232A /* UIImage+RCImage.m in Sources */,
 				386B0E091B1AC29100B59996 /* AppDelegate.m in Sources */,
@@ -858,6 +897,7 @@
 				384084B11B58F67D00768A98 /* Person.m in Sources */,
 				38FB36A41B4BD40900C6232A /* RCDTextFieldValidate.m in Sources */,
 				38FB36991B4BD40900C6232A /* NSArray+JSONModel.m in Sources */,
+				384084E71B5D07D600768A98 /* FriendsListTableViewController.m in Sources */,
 				38FB36C21B4BD49800C6232A /* RCDHttpTool.m in Sources */,
 				38FB36A91B4BD40900C6232A /* SDWebImageCompat.m in Sources */,
 			);
@@ -998,7 +1038,7 @@
 					"$(PROJECT_DIR)/YuePao/Utilities/umsdk_IOS_analytics_idfa_v3.4.6/UMAnalytics_Sdk_3.4.6",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "98e98d65-f9e7-4393-81ad-915105e63d47";
+				PROVISIONING_PROFILE = "d5d20a88-faa3-4f2b-9a76-1ce5919b01db";
 			};
 			name = Debug;
 		};

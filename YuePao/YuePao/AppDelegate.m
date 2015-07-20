@@ -45,30 +45,52 @@
 {
     // 此处最终代码逻辑实现需要您从本地缓存或服务器端获取用户信息。
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    dicUserInfo = [defaults valueForKey:@"arrUserInfo"];
+    dicUserInfo = [[NSMutableDictionary alloc] initWithDictionary:[defaults valueForKey:@"dicUserInfo"]];
     if (!dicUserInfo) {
         dicUserInfo = [[NSMutableDictionary alloc] initWithCapacity:0];
     }
+    //get userInfo from local property
     if ([dicUserInfo objectForKey:userId]) {
-        RCUserInfo *user = [dicUserInfo objectForKey:userId];
+        NSDictionary *userInfo = [dicUserInfo objectForKey:userId];
+        RCUserInfo *user = [[RCUserInfo alloc]init];
+        user.userId = userId;
+        user.name = [userInfo objectForKey:@"name"];
+        user.portraitUri = @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png";
         return completion(user);
     }
     else {
-        RCUserInfo *user = [[RCUserInfo alloc]init];
-        user.userId = userId;
-        user.name = @"韩梅梅";
-        user.portraitUri = @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png";
-        return completion(user);
+    //get userInfo from server and save in local property
+        AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html", nil];
+        NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+        [params setObject:userId forKey:@"uuid"];
+        [manager POST:kUrlGetUserInfo parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+            
+            NSDictionary *responseDic = (NSDictionary*)responseObject;
+            NSString *result = [responseDic objectForKey:@"result"];
+            if ([result isEqualToString:kSuccess]) {
+                //get success
+                NSLog(@"get userInfo success!");
+                RCUserInfo *user = [[RCUserInfo alloc]init];
+                user.userId = userId;
+                user.name = [[responseDic objectForKey:@"data"] objectForKey:@"name"];
+                user.portraitUri = @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png";
+                //userInfo for single person
+                NSDictionary *userInfo = [[NSDictionary alloc] initWithObjectsAndKeys:user.name,@"name", nil];
+                [dicUserInfo setObject:userInfo forKey:userId];
+                [defaults setObject:dicUserInfo forKey:@"dicUserInfo"];
+                return completion(user);
+            }
+            else{
+                NSLog(@"%@",[responseDic objectForKey:@"data"]);
+            }
+        } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+            NSLog(@"get userInfo net error!");
+        }];
+
         
     }
-//    if ([@"1" isEqual:userId]) {
-//        RCUserInfo *user = [[RCUserInfo alloc]init];
-//        user.userId = @"1";
-//        user.name = @"韩梅梅";
-//        user.portraitUri = @"http://rongcloud-web.qiniudn.com/docs_demo_rongcloud_logo.png";
-//        
-//        return completion(user);
-//    }
     return completion(nil);
 }
 

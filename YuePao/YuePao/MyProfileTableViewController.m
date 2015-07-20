@@ -7,6 +7,8 @@
 //
 
 #import "MyProfileTableViewController.h"
+#import "prefix-header.h"
+#import "FriendsListTableViewController.h"
 
 @interface MyProfileTableViewController ()
 
@@ -55,7 +57,41 @@
     return cell;
 }
 */
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    NSInteger section = indexPath.section;
+    if (section !=1 && section !=2) {
+        return;
+    }
+    NSInteger row = indexPath.row;
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html", nil];
+//    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+//    [params setObject:person.uuid forKey:@"passiveAttentionUuid"];
+    if (1 == section) {
+        switch (row) {
+            case 0: //我关注的人
+            {
+                
+                FriendsListTableViewController *followList = [[FriendsListTableViewController alloc] initWithListType:FRIEDNS_LIST_TYPE_FOLLOW];
+                [self.navigationController pushViewController:followList animated:YES];
+            }
+                break;
+            case 1: //我关注的人
+            {
+                
+                FriendsListTableViewController *followList = [[FriendsListTableViewController alloc] initWithListType:FRIEDNS_LIST_TYPE_FOLLOWED];
+                [self.navigationController pushViewController:followList animated:YES];
+            }
+                break;
+            default:
+                break;
+        }
+    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

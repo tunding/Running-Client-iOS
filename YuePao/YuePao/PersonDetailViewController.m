@@ -9,6 +9,7 @@
 #import "PersonDetailViewController.h"
 #import "Person.h"
 #import "RCDChatViewController.h"
+#import "prefix-header.h"
 
 @interface PersonDetailViewController ()
 {
@@ -54,7 +55,28 @@
 -(IBAction)btnFollowPressed:(id)sender
 {
     
-    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html", nil];
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:person.uuid forKey:@"passiveAttentionUuid"];
+    [manager POST:kUrlFollowOther parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *responseDic = (NSDictionary*)responseObject;
+        NSString *result = [NSString stringWithFormat:@"%@",[responseDic objectForKey:@"code"]];
+        if ([result isEqualToString:@"1000"]) {
+            
+            NSLog(@"follow other success!");
+            [btnFollow setTitle:@"已关注" forState:UIControlStateNormal];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"关注成功！" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles: nil];
+            [alert show];
+        }
+        else{
+            NSLog(@"%@",[responseDic objectForKey:@"data"]);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"follow other net error!");
+    }];
 }
 -(IBAction)btnSendMessasgePressed:(id)sender
 {
