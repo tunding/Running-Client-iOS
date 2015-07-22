@@ -32,9 +32,9 @@
 //follow somebody
 #define kUrlFollowOther [NSString stringWithFormat:@"%@ralationship/friendship/attention",kUrlHost]
 //我关注的人
-#define kUrlFollowList [NSString stringWithFormat:@"%@ralationship/friendship/listfriend",kUrlHost]
+#define kUrlFollowList [NSString stringWithFormat:@"%@ralationship/friendship/iattention",kUrlHost]
 //关注我的人
-#define kUrlFollowedList [NSString stringWithFormat:@"%@ralationship/friendship/listfriend",kUrlHost]
+#define kUrlFollowedList [NSString stringWithFormat:@"%@ralationship/friendship/attentionme",kUrlHost]
 //我发布的活动
 #define kUrlPublishList [NSString stringWithFormat:@"%@activity/info/public/gethistoryactivity",kUrlHost]
 //我参与的活动

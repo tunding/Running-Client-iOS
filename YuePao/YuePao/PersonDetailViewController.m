@@ -40,6 +40,14 @@
     lblLastTime.text = person.lastTime;
     lblSignature.text = person.signature;
     self.navigationItem.title = person.name;
+    if ([person.followFlag isEqualToString:@"1"]) {
+        [btnFollow setTitle:@"已关注" forState:UIControlStateNormal];
+        [btnFollow setUserInteractionEnabled:NO];
+    }
+    else{
+        [btnFollow setTitle:@"未关注" forState:UIControlStateNormal];
+        [btnFollow setUserInteractionEnabled:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

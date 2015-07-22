@@ -15,6 +15,7 @@
 @synthesize distance;
 @synthesize lastTime;
 @synthesize signature;
+@synthesize followFlag;
 
 -(instancetype)initWithDic:(NSDictionary*)dic
 {
@@ -26,6 +27,7 @@
     distance = [NSString stringWithFormat:@"%@m", [distance substringToIndex:[distance rangeOfString:@"."].location]];
     lastTime = [NSString stringWithFormat:@"%@",[dic objectForKey:@"lastTime"]];
     signature = [NSString stringWithFormat:@"%@",[dic objectForKey:@"signature"]];
+    followFlag = [NSString stringWithFormat:@"%@",[dic objectForKey:@"attentionFlag"]];
     return self;
 }
 @end

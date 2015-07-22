@@ -65,11 +65,6 @@
         return;
     }
     NSInteger row = indexPath.row;
-    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    manager.responseSerializer = [AFJSONResponseSerializer serializer];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html", nil];
-//    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
-//    [params setObject:person.uuid forKey:@"passiveAttentionUuid"];
     if (1 == section) {
         switch (row) {
             case 0: //我关注的人

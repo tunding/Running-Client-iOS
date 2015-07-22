@@ -95,35 +95,15 @@
     NearMenTableViewCell *cell;
     cell = [tableView dequeueReusableCellWithIdentifier:@"nearmen"];
     if (!cell) {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"nearmen"];
           cell = [[[NSBundle mainBundle] loadNibNamed:@"NearMenTableViewCell" owner:self options:nil] lastObject];
     }
     NSInteger row = indexPath.row;
-    NSString *name = [NSString stringWithFormat:@"%@",[[arrNearMen objectAtIndex:row] objectForKey:@"name"]];
-    NSString *age =  [NSString stringWithFormat:@"%@",[[arrNearMen objectAtIndex:row] objectForKey:@"age"]];
-    NSString *distance = [NSString stringWithFormat:@"%@",[[arrNearMen objectAtIndex:row] objectForKey:@"distance"]];
-    distance = [NSString stringWithFormat:@"%@m", [distance substringToIndex:[distance rangeOfString:@"."].location]];
-//    NSString *lastTime = [[arrNearMen objectAtIndex:row] objectForKey:@"lastTime"];
-//    NSString *signature = [[arrNearMen objectAtIndex:row] objectForKey:@"signature"];
-    cell.name = name;
-    cell.age = age;
-    cell.distance = distance;
-//    cell.lastTime = lastTime;
-//    cell.signature = signature;
+    [cell setPersonFromDic:[arrNearMen objectAtIndex:row]];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
-    
-    //创建会话
-//    RCDChatViewController *chatViewController = [[RCDChatViewController alloc] init];
-//    chatViewController.conversationType = ConversationType_PRIVATE;
-//    chatViewController.targetId = [[arrNearMen objectAtIndex:row] objectForKey:@"uuid"];
-//    chatViewController.title = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
-//    chatViewController.userName = [[arrNearMen objectAtIndex:row] objectForKey:@"name"];
-//    [self.navigationController pushViewController:chatViewController animated:YES];
-    
     PersonDetailViewController *personDetail = [[PersonDetailViewController alloc] initWithPersonDic:[arrNearMen objectAtIndex:row]];
     [self.navigationController pushViewController:personDetail animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

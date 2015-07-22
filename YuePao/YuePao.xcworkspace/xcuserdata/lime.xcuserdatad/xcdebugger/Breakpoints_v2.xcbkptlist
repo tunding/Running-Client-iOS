@@ -57,13 +57,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "YuePao/PersonDetailViewController.m"
-            timestampString = "459078346.646818"
+            filePath = "YuePao/FriendsListTableViewController.m"
+            timestampString = "459244610.162"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "-btnFollowPressed:"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-getFriendsList"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "YuePao/NearMenViewController.m"
+            timestampString = "459258947.564884"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "-getNearMenList"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

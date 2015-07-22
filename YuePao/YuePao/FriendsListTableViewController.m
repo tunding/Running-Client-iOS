@@ -57,9 +57,17 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json",@"text/json",@"text/plain",@"text/html", nil];
     [manager POST:requestUrl parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        arrList = [[NSArray alloc] initWithArray:(NSArray*)responseObject];
-        NSLog(@"get friendsList success!");
-        [self.tableView reloadData];
+        NSDictionary *responseDic = (NSDictionary*)responseObject;
+        NSString *result = [responseDic objectForKey:@"result"];
+        if ([result isEqualToString:kSuccess]) {
+            
+            arrList = [[NSArray alloc] initWithArray:(NSArray*)[responseDic objectForKey:@"data"]];
+            NSLog(@"get friendsList success!");
+            [self.tableView reloadData];
+        }
+        else{
+            NSLog(@"%@",[responseDic objectForKey:@"data"]);
+        }
 
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"get friendsList net error!");
