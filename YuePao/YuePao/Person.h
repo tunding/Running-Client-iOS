@@ -16,6 +16,7 @@
 @property (nonatomic,copy) NSString *distance;
 @property (nonatomic,copy) NSString *lastTime;
 @property (nonatomic,copy) NSString *signature;
+@property (nonatomic,copy) NSString *iconUri;
 //1:已关注 2:未关注
 @property (nonatomic,copy) NSString *followFlag;
 

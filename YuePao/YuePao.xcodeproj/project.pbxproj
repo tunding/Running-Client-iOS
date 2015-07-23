@@ -21,6 +21,9 @@
 		384084F21B5D13AC00768A98 /* ActivitiesListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084F01B5D13AC00768A98 /* ActivitiesListTableViewCell.xib */; };
 		384084F61B5D13D700768A98 /* ActivitiesListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084F41B5D13D700768A98 /* ActivitiesListTableViewController.m */; };
 		384084F71B5D13D700768A98 /* ActivitiesListTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084F51B5D13D700768A98 /* ActivitiesListTableViewController.xib */; };
+		384084FD1B60C5AC00768A98 /* ActivityDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 384084FB1B60C5AC00768A98 /* ActivityDetailViewController.m */; };
+		384084FE1B60C5AC00768A98 /* ActivityDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 384084FC1B60C5AC00768A98 /* ActivityDetailViewController.xib */; };
+		384085011B60CA4800768A98 /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 384085001B60CA4800768A98 /* Activity.m */; };
 		3864D4051B59691B00FC0DC2 /* MyProfileTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */; };
 		386B0E061B1AC29100B59996 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E051B1AC29100B59996 /* main.m */; };
 		386B0E091B1AC29100B59996 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 386B0E081B1AC29100B59996 /* AppDelegate.m */; };
@@ -134,6 +137,11 @@
 		384084F31B5D13D700768A98 /* ActivitiesListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivitiesListTableViewController.h; sourceTree = "<group>"; };
 		384084F41B5D13D700768A98 /* ActivitiesListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivitiesListTableViewController.m; sourceTree = "<group>"; };
 		384084F51B5D13D700768A98 /* ActivitiesListTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivitiesListTableViewController.xib; sourceTree = "<group>"; };
+		384084FA1B60C5AC00768A98 /* ActivityDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityDetailViewController.h; sourceTree = "<group>"; };
+		384084FB1B60C5AC00768A98 /* ActivityDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityDetailViewController.m; sourceTree = "<group>"; };
+		384084FC1B60C5AC00768A98 /* ActivityDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ActivityDetailViewController.xib; sourceTree = "<group>"; };
+		384084FF1B60CA4800768A98 /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Activity.h; sourceTree = "<group>"; };
+		384085001B60CA4800768A98 /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Activity.m; sourceTree = "<group>"; };
 		3864D4031B59691B00FC0DC2 /* MyProfileTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileTableViewController.h; sourceTree = "<group>"; };
 		3864D4041B59691B00FC0DC2 /* MyProfileTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileTableViewController.m; sourceTree = "<group>"; };
 		386B0E001B1AC29100B59996 /* YuePao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YuePao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -391,6 +399,11 @@
 				384084EE1B5D13AC00768A98 /* ActivitiesListTableViewCell.h */,
 				384084EF1B5D13AC00768A98 /* ActivitiesListTableViewCell.m */,
 				384084F01B5D13AC00768A98 /* ActivitiesListTableViewCell.xib */,
+				384084FA1B60C5AC00768A98 /* ActivityDetailViewController.h */,
+				384084FB1B60C5AC00768A98 /* ActivityDetailViewController.m */,
+				384084FC1B60C5AC00768A98 /* ActivityDetailViewController.xib */,
+				384084FF1B60CA4800768A98 /* Activity.h */,
+				384085001B60CA4800768A98 /* Activity.m */,
 				386B0E0D1B1AC29100B59996 /* Main.storyboard */,
 				38BEC3761B2EDFE00088B457 /* prefix-header.h */,
 				386B0E101B1AC29100B59996 /* Images.xcassets */,
@@ -769,6 +782,7 @@
 				384084AB1B58E30A00768A98 /* PersonDetailViewController.xib in Resources */,
 				386B0E141B1AC29100B59996 /* LaunchScreen.xib in Resources */,
 				384084E81B5D07D600768A98 /* FriendsListTableViewController.xib in Resources */,
+				384084FE1B60C5AC00768A98 /* ActivityDetailViewController.xib in Resources */,
 				384084A61B575FB100768A98 /* NearActivityTableViewCell.xib in Resources */,
 				384084F71B5D13D700768A98 /* ActivitiesListTableViewController.xib in Resources */,
 				386B0E111B1AC29100B59996 /* Images.xcassets in Resources */,
@@ -856,11 +870,13 @@
 				38FB36E81B4BD99700C6232A /* RCDDiscussGroupSettingViewController.m in Sources */,
 				38FB36A61B4BD40900C6232A /* MKAnnotationView+WebCache.m in Sources */,
 				38FB36CA1B4BD65200C6232A /* RCDSelectPersonTableViewCell.m in Sources */,
+				384085011B60CA4800768A98 /* Activity.m in Sources */,
 				38FB369A1B4BD40900C6232A /* JSONAPI.m in Sources */,
 				38FB35F01B4BD1B600C6232A /* RCDChatViewController.m in Sources */,
 				384084A51B575FB100768A98 /* NearActivityTableViewCell.m in Sources */,
 				38FB36C01B4BD49800C6232A /* RCDAddFriendViewController.m in Sources */,
 				384084F61B5D13D700768A98 /* ActivitiesListTableViewController.m in Sources */,
+				384084FD1B60C5AC00768A98 /* ActivityDetailViewController.m in Sources */,
 				38FB36D81B4BD72900C6232A /* RCDAddressBookTableViewCell.m in Sources */,
 				38FB36B71B4BD40900C6232A /* UIImage+RCImage.m in Sources */,
 				386B0E091B1AC29100B59996 /* AppDelegate.m in Sources */,

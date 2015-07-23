@@ -14,9 +14,9 @@
 @property (nonatomic,strong) IBOutlet UILabel *lblTime;
 @property (nonatomic,strong) IBOutlet UILabel *lblAddress;
 @property (nonatomic,strong) IBOutlet UILabel *lblCount;
+@property (nonatomic,strong) IBOutlet UILabel *lblDistance;
+@property (nonatomic,strong) IBOutlet UILabel *lblTag;
+@property (nonatomic,strong) IBOutlet UIButton *btnParticipate;
 
-@property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) NSString *time;
-@property (nonatomic,copy) NSString *address;
-@property (nonatomic,copy) NSString *count;
+-(void)setActivityFromDic:(NSDictionary *)activityDic;
 @end

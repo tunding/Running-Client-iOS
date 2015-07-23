@@ -8,8 +8,12 @@
 
 #import "NearMenTableViewCell.h"
 #import "prefix-header.h"
+#import "Person.h"
 
 @implementation NearMenTableViewCell
+{
+    Person *person;
+}
 @synthesize iconView;
 @synthesize lblName;
 @synthesize lblAge;
@@ -17,15 +21,6 @@
 @synthesize lblLastTime;
 @synthesize lblSignature;
 @synthesize btnFollow;
-
-@synthesize iconURI;
-@synthesize name;
-@synthesize age;
-@synthesize distance;
-@synthesize lastTime;
-@synthesize signature;
-
-@synthesize person;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -46,6 +41,7 @@
     lblDistance.text = person.distance;
     lblLastTime.text = person.lastTime;
     lblSignature.text = person.signature;
+    //add icon uri
     if ([person.followFlag isEqualToString:@"1"]) {
         [btnFollow setTitle:@"已关注" forState:UIControlStateNormal];
         [btnFollow setUserInteractionEnabled:NO];
@@ -54,30 +50,6 @@
         [btnFollow setTitle:@"未关注" forState:UIControlStateNormal];
         [btnFollow setUserInteractionEnabled:YES];
     }
-}
--(void)setIconURI:(NSString *)iconURI
-{
-    
-}
--(void)setName:(NSString *)_name
-{
-    lblName.text = _name;
-}
--(void)setAge:(NSString *)_age
-{
-    lblAge.text = _age;
-}
--(void)setDistance:(NSString *)_distance
-{
-    lblDistance.text = _distance;
-}
--(void)setLastTime:(NSString *)_lastTime
-{
-    lblLastTime.text = _lastTime;
-}
--(void)setSignature:(NSString *)_signature
-{
-    lblSignature.text = _signature;
 }
 
 -(IBAction)btnFollowPressed:(id)sender
@@ -95,6 +67,7 @@
             
             NSLog(@"follow other success!");
             [btnFollow setTitle:@"已关注" forState:UIControlStateNormal];
+            [btnFollow setUserInteractionEnabled:NO];
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"关注成功！" delegate:nil cancelButtonTitle:@"好的" otherButtonTitles: nil];
             [alert show];
         }

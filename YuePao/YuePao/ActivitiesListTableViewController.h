@@ -16,4 +16,5 @@ typedef NS_ENUM(NSInteger, ACTIVITIES_LIST_TYPE)
 
 @interface ActivitiesListTableViewController : UITableViewController
 
+-(instancetype)initWithListType:(ACTIVITIES_LIST_TYPE)type;
 @end

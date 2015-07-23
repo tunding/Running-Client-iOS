@@ -9,11 +9,12 @@
 #import "ActivitiesListTableViewController.h"
 #import "prefix-header.h"
 #import "ActivitiesListTableViewCell.h"
+#import "ActivityDetailViewController.h"
 
 @interface ActivitiesListTableViewController ()
 {
     ACTIVITIES_LIST_TYPE listType;
-    NSArray *arrList;
+    NSMutableArray *arrList;
     NSString *requestUrl;
 }
 
@@ -29,6 +30,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    arrList = [[NSMutableArray alloc] initWithCapacity:0];
     switch (listType) {
         case ACTIVITIES_LIST_TYPE_PUBLISH:
             self.navigationItem.title = @"我发布的活动";
@@ -61,7 +63,7 @@
         if ([result isEqualToString:kSuccess]) {
             
             NSLog(@"get activitiesList success!");
-            arrList = [[NSArray alloc] initWithArray:(NSArray*)[responseDic objectForKey:@"data"]];
+            [arrList setArray:(NSArray*)[responseDic objectForKey:@"data"]];
             [self.tableView reloadData];
         }
         else{
@@ -82,13 +84,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return arrList.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ActivitiesListTableViewCell *cell;
@@ -98,7 +100,7 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ActivitiesListTableViewCell" owner:self options:nil] lastObject];
     }
     NSInteger row = indexPath.row;
-    NSString *name = [NSString stringWithFormat:@"%@",[[arrList objectAtIndex:row] objectForKey:@"name"]];
+    NSString *name = [NSString stringWithFormat:@"%@",[[arrList objectAtIndex:row] objectForKey:@"address"]];
     cell.name = name;
     return cell;
 }
@@ -146,21 +148,17 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here, for example:
-    // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
     
-    // Pass the selected object to the new view controller.
-    
-    // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    NSInteger row = indexPath.row;
+    ActivityDetailViewController *activityDetail = [[ActivityDetailViewController alloc] initWithActivityDic:[arrList objectAtIndex:row]];
+    [self.navigationController pushViewController:activityDetail animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-*/
 
 /*
 #pragma mark - Navigation

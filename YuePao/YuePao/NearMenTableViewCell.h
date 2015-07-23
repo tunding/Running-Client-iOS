@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Person.h"
 
 
 @interface NearMenTableViewCell : UITableViewCell
@@ -19,14 +18,6 @@
 @property (nonatomic,strong) IBOutlet UILabel *lblLastTime;
 @property (nonatomic,strong) IBOutlet UILabel *lblSignature;
 @property (nonatomic,strong) IBOutlet UIButton *btnFollow;
-
-@property (nonatomic,strong) Person *person;
-@property (nonatomic,copy) NSString *iconURI;
-@property (nonatomic,copy) NSString *name;
-@property (nonatomic,copy) NSString *age;
-@property (nonatomic,copy) NSString *distance;
-@property (nonatomic,copy) NSString *lastTime;
-@property (nonatomic,copy) NSString *signature;
 
 -(void)setPersonFromDic:(NSDictionary *)personDic;
 @end

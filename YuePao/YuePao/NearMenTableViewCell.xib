@@ -77,7 +77,7 @@
                 <outlet property="lblName" destination="xVL-uH-Mdo" id="a03-Se-Bkp"/>
                 <outlet property="lblSignature" destination="Go7-Eu-cYK" id="y30-r8-znc"/>
             </connections>
-            <point key="canvasLocation" x="305" y="313"/>
+            <point key="canvasLocation" x="384" y="328"/>
         </tableViewCell>
     </objects>
 </document>

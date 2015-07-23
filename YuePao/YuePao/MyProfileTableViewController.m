@@ -9,6 +9,7 @@
 #import "MyProfileTableViewController.h"
 #import "prefix-header.h"
 #import "FriendsListTableViewController.h"
+#import "ActivitiesListTableViewController.h"
 
 @interface MyProfileTableViewController ()
 
@@ -79,6 +80,20 @@
                 
                 FriendsListTableViewController *followList = [[FriendsListTableViewController alloc] initWithListType:FRIEDNS_LIST_TYPE_FOLLOWED];
                 [self.navigationController pushViewController:followList animated:YES];
+            }
+                break;
+            case 2: //我发布的活动
+            {
+                
+                ActivitiesListTableViewController *publishList = [[ActivitiesListTableViewController alloc] initWithListType:ACTIVITIES_LIST_TYPE_PUBLISH];
+                [self.navigationController pushViewController:publishList animated:YES];
+            }
+                break;
+            case 3: //我参与的活动
+            {
+                
+                ActivitiesListTableViewController *participateList = [[ActivitiesListTableViewController alloc] initWithListType:ACTIVITIES_LIST_TYPE_PUBLISH];
+                [self.navigationController pushViewController:participateList animated:YES];
             }
                 break;
             default:

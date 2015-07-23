@@ -11,6 +11,7 @@
 #import "prefix-header.h"
 #import <MJRefresh/MJRefresh.h>
 #import "NearActivityTableViewCell.h"
+#import "ActivityDetailViewController.h"
 
 @interface NearActivityViewController ()
 {
@@ -24,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    arrNearRun = [[NSMutableArray alloc] initWithCapacity:0];
     // 下拉刷新
     nearRunTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
@@ -78,7 +80,7 @@
         if ([result isEqualToString:kSuccess]) {
             
             NSLog(@"get nearrun success!");
-            arrNearRun = (NSMutableArray*)[responseDic objectForKey:@"data"];
+            [arrNearRun setArray:(NSArray*)[responseDic objectForKey:@"data"]];
             [nearRunTableView reloadData];
         }
         else{
@@ -95,13 +97,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger num;
-    if ([arrNearRun respondsToSelector:@selector(count)]) {
-        num = arrNearRun.count;
-    }
-    else
-        num = 0;
-    return num;
+    return arrNearRun.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -111,17 +107,14 @@
         cell = [[[NSBundle mainBundle] loadNibNamed:@"NearActivityTableViewCell" owner:self options:nil] lastObject];
     }
     NSInteger row = indexPath.row;
-    NSString *time = [NSString stringWithFormat:@"%@",[[arrNearRun objectAtIndex:row] objectForKey:@"time"]];
-    NSString *address = [NSString stringWithFormat:@"%@",[[arrNearRun objectAtIndex:row] objectForKey:@"address"]];
-    NSString *count = [NSString stringWithFormat:@"%@",[[arrNearRun objectAtIndex:row] objectForKey:@"participateCount"]];
-    cell.time = time;
-    cell.address = address;
-    cell.count = count;
+    [cell setActivityFromDic:[arrNearRun objectAtIndex:row]];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSInteger row = indexPath.row;
+    ActivityDetailViewController *activityDetail = [[ActivityDetailViewController alloc] initWithActivityDic:[arrNearRun objectAtIndex:row]];
+    [self.navigationController pushViewController:activityDetail animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

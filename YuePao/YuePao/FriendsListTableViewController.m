@@ -13,7 +13,7 @@
 @interface FriendsListTableViewController ()
 {
     FRIEDNS_LIST_TYPE listType;
-    NSArray *arrList;
+    NSMutableArray *arrList;
     NSString *requestUrl;
 }
 
@@ -29,6 +29,7 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    arrList = [[NSMutableArray alloc] initWithCapacity:0];
     switch (listType) {
         case FRIEDNS_LIST_TYPE_FOLLOW:
             self.navigationItem.title = @"我关注的人";
@@ -61,7 +62,7 @@
         NSString *result = [responseDic objectForKey:@"result"];
         if ([result isEqualToString:kSuccess]) {
             
-            arrList = [[NSArray alloc] initWithArray:(NSArray*)[responseDic objectForKey:@"data"]];
+            [arrList setArray:(NSArray*)[responseDic objectForKey:@"data"]];
             NSLog(@"get friendsList success!");
             [self.tableView reloadData];
         }

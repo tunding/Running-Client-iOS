@@ -25,6 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    arrNearMen = [[NSMutableArray alloc] initWithCapacity:0];
+    
     // 下拉刷新
     nearMenTableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         // 模拟延迟加载数据，因此2秒后才调用（真实开发中，可以移除这段gcd代码）
@@ -65,7 +67,7 @@
         if ([result isEqualToString:kSuccess]) {
 
             NSLog(@"get nearmen success!");
-            arrNearMen = [responseDic objectForKey:@"data"];
+            [arrNearMen setArray:[responseDic objectForKey:@"data"]];
             [nearMenTableView reloadData];
         }
         else{
@@ -81,13 +83,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSInteger num;
-    if (arrNearMen) {
-        num = arrNearMen.count;
-    }
-    else
-        num = 0;
-    return num;
+    return arrNearMen.count;
 }
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
